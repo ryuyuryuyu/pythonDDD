@@ -1,4 +1,5 @@
 from abc import ABCMeta, abstractmethod
+from entities.user_entity import User
 
 class UserRepository(metaclass=ABCMeta):
     """
@@ -8,6 +9,6 @@ class UserRepository(metaclass=ABCMeta):
         metaclass (_type_, optional): _description_. Defaults to ABCMeta.
     """
     @abstractmethod
-    def get_user_by_id(self, user_id: int):
+    def get_user_by_id(self, user_id: int) -> User:
         pass
 
